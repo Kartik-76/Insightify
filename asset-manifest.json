@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Insightify/static/css/main.b6367748.css",
+    "main.js": "/Insightify/static/js/main.68610ea8.js",
+    "static/js/787.719ec76d.chunk.js": "/Insightify/static/js/787.719ec76d.chunk.js",
+    "index.html": "/Insightify/index.html",
+    "main.b6367748.css.map": "/Insightify/static/css/main.b6367748.css.map",
+    "main.68610ea8.js.map": "/Insightify/static/js/main.68610ea8.js.map",
+    "787.719ec76d.chunk.js.map": "/Insightify/static/js/787.719ec76d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6367748.css",
+    "static/js/main.68610ea8.js"
+  ]
+}

@@ -2,15 +2,15 @@
 import { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 // import ReactDOM from "react-dom/client";
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Routes
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 
 
 function App() {
@@ -44,20 +44,22 @@ function App() {
   
   return (
    <>
-   {/* <Router> */}{/* </Router> */}
-      <Navbar title="Insightify" about="about-us" mode={mode} toggleMode = {toggleMode}/>
-      <Alert alert={alert}/>
-      <div className="container my-3">
-        <TextForm showAlert={showAlert} heading = "Enter the text to analyze" mode={mode}/>
-      </div>
-      {/* <Routes> */}
-        {/* 
-          /users      -----> component 1
-          /users/home -----> component 2  (if doesnt uses exact keyword then it will render component 1 as react uses partial matching)
-        */}
-        {/* <Route exact path="/about" element={<About/>}/>
-        <Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Enter the text to analyze" mode={mode}/>}/> */}
-      {/* </Routes> */}
+    {/* 
+      /users      -----> component 1
+      /users/home -----> component 2  (if doesnt uses exact keyword then it will render component 1 as react uses partial matching)
+    */} 
+    <Router>
+        <Navbar title="Insightify" about="about-us" mode={mode} toggleMode = {toggleMode}/>
+        <Alert alert={alert}/>
+        <div className="container my-3">
+          <Routes>
+            <Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Enter the text to analyze" mode={mode}/>}/>
+            <Route exact path = "/about" element={<About mode = {mode}/>}/>
+          </Routes>
+        </div>
+    </Router>
+
+
       
       
       
